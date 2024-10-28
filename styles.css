@@ -123,12 +123,12 @@
             }
 
             .projects-figure {
-                width: 45%; /* Adjusts to fit two figures in a row */
+                width: 45%; 
                 margin: 0;
             }
 
             .projects-image {
-                width: 100%; /* Makes the image fill the figure container */
+                width: 100%;
                 height: auto;
                 border-radius: 8px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -136,7 +136,7 @@
             }
 
             .projects-image:hover {
-                transform: scale(1.05); /* Slight zoom effect on hover */
+                transform: scale(1.05); 
             }
 
             .projects-caption {
@@ -222,37 +222,37 @@
 
   #home {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Ensure the section takes up full viewport height */
-    overflow: hidden; /* Prevent content overflow */
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    overflow: hidden; 
 }
 
 #home .content {
-    color: #ffffff; /* White text for readability */
-    padding: 20px; /* Padding for aesthetics */
-    border-radius: 5px; /* Rounded corners */
-    text-align: center; /* Center text alignment */
-    animation: slideInFromLeft 0.5s ease-out forwards; /* Define the animation */
+    color: #ffffff;
+    padding: 20px; 
+    border-radius: 5px; 
+    text-align: center; 
+    animation: slideInFromLeft 0.5s ease-out forwards;
 }
 
 @keyframes slideInFromLeft {
     0% {
-        transform: translateX(-100%); /* Start off-screen to the left */
-        opacity: 0; /* Start faded out */
+        transform: translateX(-100%); 
+        opacity: 0; 
     }
     100% {
-        transform: translateX(0); /* End aligned with the normal flow */
-        opacity: 1; /* Fully visible */
+        transform: translateX(0); 
+        opacity: 1; 
     }
 }
 
 #home h1, #home p {
-    animation-delay: 0.3s; /* Delays the start of the animation */
+    animation-delay: 0.3s; 
 }
 
 #home .image-gallery {
-    display: none; /* Hide the image gallery inside the #home section on smaller screens */
+    display: none; 
 }
 
 
@@ -260,104 +260,102 @@
 
     #resume .image-gallery {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
-        gap: 10px; /* Space between images */
-        padding: 5px; /* Reduced padding for tighter layout */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px; 
+        padding: 5px; 
     }
 
     #resume .image-card {
-        flex: 1 0 48%; /* Allows the card to fill almost half of the grid column */
-        max-width: 100%; /* Each card uses the full width of its grid column */
-        margin: 5px 0; /* Reduced margin for a compact layout */
-        box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+        flex: 1 0 48%; 
+        max-width: 100%; 
+        margin: 5px 0; 
+        box-sizing: border-box;
     }
 
     #resume .image-card img {
-        width: 70%; /* Images should fill their containers */
-        height: auto; /* Maintain aspect ratio */
+        width: 70%; 
+        height: auto;
          display: block;
     }
 
     #services {
-        padding: 10px; /* Adjusts padding for the whole section */
+        padding: 10px; 
     }
 
     #services h1 {
-        font-size: 7vw; /* Reduces the font size of the header */
-        margin-bottom: 5px; /* Reduces the space below the header */
+        font-size: 7vw; 
+        margin-bottom: 5px; 
     }
 
     #services .image-gallery {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 5px; /* Reduces space between images */
+        gap: 5px; 
     }
 
     #services .image-card {
-        width: 50%; /* Reduces width to better fit mobile screens */
-        margin: 5px 0; /* Reduces space around each card */
+        width: 50%; 
+        margin: 5px 0; 
     }
 
     #services .image-card img {
-        width: 110%; /* Images will fill their container */
-        height: auto; /* Keeps the image aspect ratio intact */
+        width: 110%; 
+        height: auto; 
     }
 
     #projects .content {
-        padding: 10px; /* Adds padding to the content for better spacing */
-        text-align: center; /* Ensures text is centered */
+        padding: 10px; 
+        text-align: center; 
     }
 
     #projects .intro {
-        font-size: 25px; /* Adjusts the font size for introduction text */
-        margin-bottom: 10px; /* Adds a little space below the introduction text */
+        font-size: 25px; 
+        margin-bottom: 10px; 
     }
 
     #projects .image-gallery {
         display: flex;
-        /* Stacks images vertically */
-        gap: 5px; /* Reduces gap between images */
+        gap: 5px; 
     }
 
     #projects figure {
-        width: 100%; /* Sets the width of the figure to take the full container width */
-        margin: 0; /* Removes default margin from figures */
+        width: 100%; 
+        margin: 0; 
     }
 
     #projects img {
-        width: 10; /* Reduces image width to 80% of its container to ensure it fits well */
-        height: 10%; /* Maintains the aspect ratio */
+        width: 10; 
+        height: 10%; 
     }
 
     #projects figcaption {
-        font-size: 12px; /* Adjusts the font size of the caption for better readability */
+        font-size: 12px; 
     }
 
     #projects h1 {
-        font-size: 20px; /* Reduces the font size of the heading */
-        margin-top: 20px; /* Adds space above the heading */
+        font-size: 20px; 
+        margin-top: 20px; 
     }
 
 header, nav {
-        display: none; /* Hide the navigation bar for simplicity */
+        display: none; 
     }
 
     body {
-
         margin: 0;
         padding: 0;
         font-family: 'Tahoma', sans-serif;
-        font-size: 10px; /* Increase font size for readability */
-        color: #ffffff; /* Ensure text is easily readable on common mobile backgrounds */
-        background: #333; /* Optional: Dark background for contrast */
+        font-size: 10px; 
+        color: #ffffff; 
+        background: #333; 
        
     }
 
     section {
-        margin: 0; /* Remove default margins */
-        padding: 10px 0; /* Uniform padding for all sections */
-        display: block; /* Display sections as blocks */
+        margin: 0; 
+        padding: 10px 0;
+        display: block; 
          overflow: hidden;
 
                      height: 100vh; 
@@ -376,23 +374,23 @@ header, nav {
 
   
     .section-heading, h1, p {
-        text-align: center; /* Center text for better mobile readability */
-        margin: 10px 0; /* Add top and bottom margin for spacing */
+        text-align: center; 
+        margin: 10px 0; 
     }
 
     #footer-bar {
-        position: relative; /* Change from fixed to relative */
+        position: relative; 
         width: 100%;
         background-color: #333;
         color: white;
         text-align: center;
-        padding: 10px 0; /* Adjust padding to reduce height */
+        padding: 10px 0; 
     }
 
     #footer-bar img {
-        width: 30px; /* Adjust image size in the footer */
+        width: 30px; 
         height: auto;
-        margin-right: 5px; /* Reduce space between icons */
+        margin-right: 5px; 
     }
 
 }
@@ -521,35 +519,34 @@ header, nav {
     }
         #projects .projects-image {
         max-width: 300px;
-        max-height: 200px; /* Adjust the height for medium-sized screens */
+        max-height: 200px; 
     }
 
     #projects figcaption {
-        font-size: 12px; /* Adjusts the font size of the caption for better readability */
+        font-size: 12px; 
     }
 
     #projects h1 {
-        font-size: 20px; /* Reduces the font size of the heading */
-        margin-top: 20px; /* Adds space above the heading */
+        font-size: 20px; 
+        margin-top: 20px; 
     }
 
 
 
 
 header, nav {
-        display: none; /* Hide the navigation bar for simplicity */
+        display: none; 
     }
 
 
     section {
-        margin: 0; /* Remove default margins */
-        padding: 10px 0; /* Uniform padding for all sections */
-        display: block; /* Display sections as blocks */
-         overflow: hidden;
-
-                     height: 100vh; 
-            justify-content: center;
-            align-items: center;
+        margin: 0; 
+        padding: 10px 0; 
+        display: block; 
+        overflow: hidden;
+        height: 100vh; 
+        justify-content: center;
+        align-items: center;
 
     }
 
@@ -563,23 +560,23 @@ header, nav {
 
   
     .section-heading, h1, p {
-        text-align: center; /* Center text for better mobile readability */
-        margin: 10px 0; /* Add top and bottom margin for spacing */
+        text-align: center; 
+        margin: 10px 0;
     }
 
     #footer-bar {
-        position: relative; /* Change from fixed to relative */
+        position: relative;
         width: 100%;
         background-color: #333;
         color: white;
         text-align: center;
-        padding: 10px 0; /* Adjust padding to reduce height */
+        padding: 10px 0;
     }
 
     #footer-bar img {
-        width: 20px; /* Adjust image size in the footer */
+        width: 20px; 
         height: auto;
-        margin-right: 5px; /* Reduce space between icons */
+        margin-right: 5px; 
     }
 
 }
