@@ -1,0 +1,618 @@
+        body {
+            margin: 0;
+            font-family: Tahoma, sans-serif;
+            color: #f0f2f2;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #333;
+            color: white;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-size: 0.5em;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        section {
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            overflow: hidden; 
+            position: relative;
+            background-color: #484e66;
+        }
+
+        #resume {
+            text-align: center;
+            padding: 50px;
+        }
+        .section-heading {
+            text-align: center;
+            font-size: 1.8em;
+            color: #f0f2f2;
+            margin-bottom: 20px;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            perspective: 1000px;
+        }
+
+        .image-gallery img {
+            width: 400px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-card {
+            position: relative;
+            width: 160px;
+            transition: transform 0.3s ease, z-index 0.3s ease;
+            cursor: pointer;
+            margin-left: -30px; 
+        }
+
+        .image-card img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .image-card:hover {
+            transform: scale(1.2) translateY(-10px);
+            z-index: 10;
+        }
+
+            .projects-content {
+                padding: 20px;
+                text-align: center;
+            }
+
+            .projects-intro {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+
+            .projects-gallery {
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                gap: 50px;
+                margin-top: 10px;
+            }
+
+            .projects-figure {
+                width: 45%; /* Adjusts to fit two figures in a row */
+                margin: 0;
+            }
+
+            .projects-image {
+                width: 100%; /* Makes the image fill the figure container */
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .projects-image:hover {
+                transform: scale(1.05); /* Slight zoom effect on hover */
+            }
+
+            .projects-caption {
+                margin-top: 8px;
+                font-size: 14px;
+                font-style: italic;
+            }
+
+            .projects-heading {
+                font-size: 35px;
+                margin-top: 20px;
+            }
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+            font-size: 24px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+         #footer-bar {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #333; 
+            color: white; 
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1000; 
+        }
+          #footer-bar img {
+              transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+              vertical-align: middle;
+              margin-right: 10px;
+              opacity: 0.8; 
+          }
+
+          #footer-bar img:hover {
+              opacity: 1; 
+              filter: brightness(1.2);
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) and (min-width: 380px) {
+
+  #home {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Ensure the section takes up full viewport height */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+#home .content {
+    color: #ffffff; /* White text for readability */
+    padding: 20px; /* Padding for aesthetics */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center text alignment */
+    animation: slideInFromLeft 0.5s ease-out forwards; /* Define the animation */
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+        opacity: 0; /* Start faded out */
+    }
+    100% {
+        transform: translateX(0); /* End aligned with the normal flow */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+#home h1, #home p {
+    animation-delay: 0.3s; /* Delays the start of the animation */
+}
+
+#home .image-gallery {
+    display: none; /* Hide the image gallery inside the #home section on smaller screens */
+}
+
+
+
+
+    #resume .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
+        gap: 10px; /* Space between images */
+        padding: 5px; /* Reduced padding for tighter layout */
+    }
+
+    #resume .image-card {
+        flex: 1 0 48%; /* Allows the card to fill almost half of the grid column */
+        max-width: 100%; /* Each card uses the full width of its grid column */
+        margin: 5px 0; /* Reduced margin for a compact layout */
+        box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    }
+
+    #resume .image-card img {
+        width: 70%; /* Images should fill their containers */
+        height: auto; /* Maintain aspect ratio */
+         display: block;
+    }
+
+    #services {
+        padding: 10px; /* Adjusts padding for the whole section */
+    }
+
+    #services h1 {
+        font-size: 7vw; /* Reduces the font size of the header */
+        margin-bottom: 5px; /* Reduces the space below the header */
+    }
+
+    #services .image-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px; /* Reduces space between images */
+    }
+
+    #services .image-card {
+        width: 50%; /* Reduces width to better fit mobile screens */
+        margin: 5px 0; /* Reduces space around each card */
+    }
+
+    #services .image-card img {
+        width: 110%; /* Images will fill their container */
+        height: auto; /* Keeps the image aspect ratio intact */
+    }
+
+    #projects .content {
+        padding: 10px; /* Adds padding to the content for better spacing */
+        text-align: center; /* Ensures text is centered */
+    }
+
+    #projects .intro {
+        font-size: 25px; /* Adjusts the font size for introduction text */
+        margin-bottom: 10px; /* Adds a little space below the introduction text */
+    }
+
+    #projects .image-gallery {
+        display: flex;
+        /* Stacks images vertically */
+        gap: 5px; /* Reduces gap between images */
+    }
+
+    #projects figure {
+        width: 100%; /* Sets the width of the figure to take the full container width */
+        margin: 0; /* Removes default margin from figures */
+    }
+
+    #projects img {
+        width: 10; /* Reduces image width to 80% of its container to ensure it fits well */
+        height: 10%; /* Maintains the aspect ratio */
+    }
+
+    #projects figcaption {
+        font-size: 12px; /* Adjusts the font size of the caption for better readability */
+    }
+
+    #projects h1 {
+        font-size: 20px; /* Reduces the font size of the heading */
+        margin-top: 20px; /* Adds space above the heading */
+    }
+
+header, nav {
+        display: none; /* Hide the navigation bar for simplicity */
+    }
+
+    body {
+
+        margin: 0;
+        padding: 0;
+        font-family: 'Tahoma', sans-serif;
+        font-size: 10px; /* Increase font size for readability */
+        color: #ffffff; /* Ensure text is easily readable on common mobile backgrounds */
+        background: #333; /* Optional: Dark background for contrast */
+       
+    }
+
+    section {
+        margin: 0; /* Remove default margins */
+        padding: 10px 0; /* Uniform padding for all sections */
+        display: block; /* Display sections as blocks */
+         overflow: hidden;
+
+                     height: 100vh; 
+            justify-content: center;
+            align-items: center;
+
+    }
+
+    .image-gallery, .image-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+  
+    .section-heading, h1, p {
+        text-align: center; /* Center text for better mobile readability */
+        margin: 10px 0; /* Add top and bottom margin for spacing */
+    }
+
+    #footer-bar {
+        position: relative; /* Change from fixed to relative */
+        width: 100%;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0; /* Adjust padding to reduce height */
+    }
+
+    #footer-bar img {
+        width: 30px; /* Adjust image size in the footer */
+        height: auto;
+        margin-right: 5px; /* Reduce space between icons */
+    }
+
+}
+/*---------------*/
+
+
+
+@media screen and (max-width: 900px){
+
+  #home {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Ensure the section takes up full viewport height */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+#home .content {
+    color: #ffffff; /* White text for readability */
+    padding: 20px; /* Padding for aesthetics */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center text alignment */
+    animation: slideInFromLeft 0.5s ease-out forwards; /* Define the animation */
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%); /* Start off-screen to the left */
+        opacity: 0; /* Start faded out */
+    }
+    100% {
+        transform: translateX(0); /* End aligned with the normal flow */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+#home h1, #home p {
+    animation-delay: 0.3s; /* Delays the start of the animation */
+    font-size: 15px;
+}
+
+#home .image-gallery {
+    display: none; /* Hide the image gallery inside the #home section on smaller screens */
+}
+
+
+
+
+#resume .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
+    gap: 10px; /* Space between images */
+    padding: 5px; /* Reduced padding for tighter layout */
+}
+
+#resume .image-card {
+    flex: 1 0 48%; /* Allows the card to fill almost half of the grid column */
+    max-width: 120%; /* Each card uses the full width of its grid column */
+    margin: 5px 0; /* Reduced margin for a compact layout */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+#resume .image-card img {
+    width: 40%; /* Images should fill their containers */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+/* Reducing h1 size for mobile screens */
+#resume h1 {
+   font-size: 5vw; /* Reduces the font size of the header */
+    margin-bottom: 3px; /* Reduces the space below the header */
+}
+
+
+    #services {
+        padding: 10px; /* Adjusts padding for the whole section */
+    }
+
+    #services h1 {
+        font-size: 5vw; /* Reduces the font size of the header */
+        margin-bottom: 5px; /* Reduces the space below the header */
+    }
+
+    #services .image-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px; /* Reduces space between images */
+    }
+
+    #services .image-card {
+        width: 50%; /* Reduces width to better fit mobile screens */
+        margin: 5px 0; /* Reduces space around each card */
+    }
+
+    #services .image-card img {
+        width: 50%; /* Images will fill their container */
+        height: auto; /* Keeps the image aspect ratio intact */
+    }
+
+    #projects .content {
+        padding: 10px; /* Adds padding to the content for better spacing */
+        text-align: center; /* Ensures text is centered */
+    }
+
+    #projects .intro {
+        font-size: 15px; /* Adjusts the font size for introduction text */
+        margin-bottom: 10px; /* Adds a little space below the introduction text */
+    }
+
+    #projects .image-gallery {
+        display: flex;
+        /* Stacks images vertically */
+        gap: 5px; /* Reduces gap between images */
+    }
+
+    #projects figure {
+        width: 100%; /* Sets the width of the figure to take the full container width */
+        margin: 0; /* Removes default margin from figures */
+    }
+
+    #projects img {
+        width: 1; /* Reduces image width to 80% of its container to ensure it fits well */
+        height: 10%; /* Maintains the aspect ratio */
+    }
+        #projects .projects-image {
+        max-width: 300px;
+        max-height: 200px; /* Adjust the height for medium-sized screens */
+    }
+
+    #projects figcaption {
+        font-size: 12px; /* Adjusts the font size of the caption for better readability */
+    }
+
+    #projects h1 {
+        font-size: 20px; /* Reduces the font size of the heading */
+        margin-top: 20px; /* Adds space above the heading */
+    }
+
+
+
+
+header, nav {
+        display: none; /* Hide the navigation bar for simplicity */
+    }
+
+
+    section {
+        margin: 0; /* Remove default margins */
+        padding: 10px 0; /* Uniform padding for all sections */
+        display: block; /* Display sections as blocks */
+         overflow: hidden;
+
+                     height: 100vh; 
+            justify-content: center;
+            align-items: center;
+
+    }
+
+    .image-gallery, .image-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+  
+    .section-heading, h1, p {
+        text-align: center; /* Center text for better mobile readability */
+        margin: 10px 0; /* Add top and bottom margin for spacing */
+    }
+
+    #footer-bar {
+        position: relative; /* Change from fixed to relative */
+        width: 100%;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 0; /* Adjust padding to reduce height */
+    }
+
+    #footer-bar img {
+        width: 20px; /* Adjust image size in the footer */
+        height: auto;
+        margin-right: 5px; /* Reduce space between icons */
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

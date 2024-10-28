@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbdullahAlTalaq</title>
+        <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#resume">Educational Journey</a></li>
+            <li><a href="#services">Professional Certificates</a></li>
+            <li><a href="#projects">Jobs</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home">
+    <div class="content">
+        <h1>Welcome!</h1>
+        <p class="intro">Abdullah Al Talaq.<br>Fresh graduate in Artificial Intelligence from Imam Abdulrahman Bin Faisal University.</p>
+        <div class="image-gallery">
+            <figure>
+                <img src="5.jpg" alt="CCSIT Entrance">
+                <figcaption>CCSIT Entrance</figcaption>
+            </figure>
+            <figure>
+                <img src="4.jpg" alt="Artificial Intelligence">
+                <figcaption>Artificial Intelligence</figcaption>
+            </figure>
+            <figure>
+                <img src="6.jpg" alt="CCSIT Building">
+                <figcaption>CCSIT Building</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section id="resume">
+    <div class="container">
+        <h1 class="section-heading">Some of the Courses I've Studied in College</h1>
+
+    <div class="image-gallery">
+        <div class="image-card" onclick="showPopup('Linear Algebra and Its Applications: This course covers the fundamentals of linear algebra, including vector spaces, matrices, determinants, and eigenvalues, with applications in various fields.')">
+            <img src="LA.jpg" alt="Image 1">
+        </div>
+        <div class="image-card" onclick="showPopup('Digital Image Processing: An introduction to the techniques and algorithms used in processing digital images, including enhancement, restoration, and segmentation.')">
+            <img src="IP.jpg" alt="Image 2">
+        </div>
+        <div class="image-card" onclick="showPopup('An Introduction to Machine Learning: This course introduces machine learning concepts, covering algorithms for classification, regression, and clustering, with real-world applications.')">
+            <img src="ML.jpg" alt="Image 3">
+        </div>
+        <div class="image-card" onclick="showPopup('Artificial Intelligence: An overview of artificial intelligence, including knowledge representation, reasoning, search algorithms, and problem-solving techniques.')">
+            <img src="ai.jpg" alt="Image 4">
+        </div>
+        <div class="image-card" onclick="showPopup('Introduction to Algorithms: This course focuses on algorithm design and analysis, covering sorting, searching, and graph algorithms to solve computational problems efficiently.')">
+            <img src="alg.jpg" alt="Image 5">
+        </div>
+        <div class="image-card" onclick="showPopup('Analytics, Data Science, and Artificial Intelligence: An exploration of data science techniques and AI, focusing on data analytics, machine learning, and how they drive decision-making processes.')">
+            <img src="DS.jpg" alt="Image 6">
+        </div>
+        <div class="image-card" onclick="showPopup('Mathematics for Machine Learning: This course covers the essential mathematical foundations, such as linear algebra, probability, and calculus, necessary for understanding machine learning.')">
+            <img src="MM.jpg" alt="Image 7">
+        </div>
+        <div class="image-card" onclick="showPopup('Operating System Concepts: An in-depth look at operating system design, covering process management, memory allocation, file systems, and security features.')">
+            <img src="os.jpg" alt="Image 8">
+        </div>
+        <div class="image-card" onclick="showPopup('Parallel Computing: This course explores parallel processing techniques and architectures, emphasizing high-performance computing and distributed systems.')">
+            <img src="PC.jpg" alt="Image 9">
+        </div>
+        <div class="image-card" onclick="showPopup('Intelligent Control of Robotic Systems: An introduction to robotic control systems, focusing on intelligent algorithms and techniques to automate and optimize robotic functions.')">
+            <img src="rob.jpg" alt="Image 10">
+        </div>
+
+    </div>
+</section>
+
+<!-- Pop-Up Modal -->
+
+
+<section id="services">
+    <div class="content">
+        <h1>Professional Certificates</h1>
+        <div class="image-gallery">
+            <div class="image-card" onclick="showPopup('CompTIA Security+ Certified to demonstrate knowledge in network security, compliance, operational security, threats, vulnerabilities, and more.', 'CEcer.jpg')">
+                <img src="CE.jpg" alt="CompTIA Security+">
+            </div>
+            <div class="image-card" onclick="showPopup('The Junior Penetration Tester (eJPT) certification designed to test on every phase of the penetration life cycle from assessment methodologies, to host and network auditing, host and network penetration testing, and web application penetration testing.', 'Capture.jpg')">
+                <img src="ejpt.jpg" alt="Certified ejpt">
+            </div>
+         <div class="image-card" onclick="showPopup('Currently working on it ㋡')">
+                <img src="eCPPT.jpg" alt="Certified ejpt">     
+        </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="content projects-content">
+        <p class="intro projects-intro">Looking for a job as: </p>
+        <div class="image-gallery projects-gallery">
+            <figure class="projects-figure">
+                <img 
+                    class="projects-image"
+                    src="tools.jpg" 
+                    alt="tools picture" 
+                    onclick="showPopup('Junior penetration tester, looking to enhance my skills in cybersecurity through practical experience and continued education. focused on earning professional certifications, solving retired Hack The Box machines, and reading articles on bug bounties and security vulnerabilities.')">
+                <figcaption class="projects-caption">Penetration Testing</figcaption>
+            </figure>
+            <figure class="projects-figure">
+                <img 
+                    class="projects-image"
+                    src="data.jpg" 
+                    alt="data science" 
+                    onclick="showPopup('Recent Artificial Intelligence graduate, have studied a wide range of data science concepts, including statistical analysis, machine learning, data manipulation, and visualization.')">
+                <figcaption class="projects-caption">Data Scientist</figcaption>
+            </figure>
+        </div>
+        <h1 class="projects-heading">But won't miss other opportunities in computer field 😃</h1>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+
+
+<div id="popup" class="popup-overlay" onclick="closePopup()">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <p id="popup-description"></p>
+        <img id="popup-image" src="" alt="Certificate Image" style="max-width: 100%; border-radius: 10px; margin-top: 20px; display: none;">
+    </div>
+</div>
+
+<div id="footer-bar">Contacts:  
+   <a href="https://www.linkedin.com/in/abdullah-al-talaq-268599250/">
+    <img src="lin.jpg" alt="LinkedIn" style="vertical-align: middle; margin-right: 10px;">
+    </a>
+    <a href="mailto:talaqabdullah2@gmail.com">
+        <img src="email.jpg" alt="Email" style="vertical-align: middle; margin-right: 10px;">
+    </a></div>
+
+</body>
+</html>
+
+
+
+
+
